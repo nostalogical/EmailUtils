@@ -1,11 +1,9 @@
+package emails;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
-
-import services.EmailDomainCounter;
-import services.EmailDomainCounterImpl;
-
 
 public class EmailDomainsApplication {
 
@@ -14,8 +12,7 @@ public class EmailDomainsApplication {
 
     public static void main(String... args){
         List<String> inputList = readInputFile();
-        EmailDomainCounter domainCounter = new EmailDomainCounterImpl();
-        displayOutput(domainCounter.countEmailDomains(inputList));
+        displayOutput(EmailListAnalytics.listDomainsByCount(inputList, 10));
 
     }
 
