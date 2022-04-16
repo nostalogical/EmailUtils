@@ -2,8 +2,8 @@
 
 ### Overview
 
-This utility allows individual and lists of email addresses to be parsed for validity and display preference, and for
-some more detailed analysis of lists of addresses. 
+This utility allows individual and lists of email addresses to be parsed for validity and display preference, and for 
+more detailed analysis of lists of addresses. 
 
 #### Main features:
 * Identify valid email addresses
@@ -11,7 +11,6 @@ some more detailed analysis of lists of addresses.
 * Deduplicate email addresses
 * Identify & remove sub-addresses (such as "example+subaddress@gmail.com")
 * Apply custom validation and parsing rules
-* Identify aliased emails addresses
 
 #### Background
 
@@ -23,7 +22,9 @@ be done to single email addresses and lists of them. To keep the project lightwe
 
 ### Using the Code
 
-There are 3 helper utility classes which allow quick analysis of email addresses.
+There are 3 helper utility classes which allow quick analysis of email addresses. These are mainly wrappers around 
+functions from `EmailContext` and `EmailListContext`, so additional functionality is possible through direct instantiation
+of these context classes.
 
 #### EmailUtils
 This class focuses on single email addresses, allowing validity and the existence of certain email parts to be checked.
